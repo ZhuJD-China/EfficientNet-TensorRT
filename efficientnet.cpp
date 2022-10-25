@@ -360,7 +360,7 @@ int main(int argc, char **argv) {
     cout << "output len=" << (malloc_usable_size(prob) / sizeof(*prob)) << endl;
     for (int k = 0; k < len_of_prob; k++) {
         if (prob[k] > max_confidence) {
-            max_confidence = sigmoid(prob[k]);
+            max_confidence = prob[k];
             max_index = k;
         }
     }
